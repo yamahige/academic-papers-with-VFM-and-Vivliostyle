@@ -1,10 +1,5 @@
-*.html
-!article.html
 publication.json
-*.pdf
-!article.pdf
-article.epub
-article/
+*.epub
 .vivliostyle
 .vs-*
 
