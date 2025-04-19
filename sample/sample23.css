@@ -1,0 +1,31 @@
+:root {
+  counter-reset: footnote 0;
+  column-count: 2;
+  column-gap: 2rem;
+  column-fill: auto;
+}
+.fn-text {
+  counter-increment: footnote;
+  display: block;
+  padding-inline-start: 2rem;
+  text-indent: -2rem;
+}
+.fn-text::before {
+  content: "*" counter(footnote);
+  display: inline;
+  width: 2rem;
+  text-align: left;
+  padding: 0;
+  margin-inline-end: 1rem;
+}
+.fn-area {
+  float: block-end;
+  float-reference: column;
+  border-block-start: thin solid currentcolor;
+}
+.fn-call::before {
+  content: "*" target-counter(attr(href url), footnote);
+  font-size: .7rem;
+  position: relative;
+  inset-block-start: -0.5rem;
+}

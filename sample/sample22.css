@@ -1,0 +1,48 @@
+:root {
+  counter-reset: figure 0 table 0;
+}
+.minipage {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* 上に揃える */
+  margin-block: 1rem;
+}
+figure {
+  margin-block: 1rem;
+}
+figure.fig,
+figure:has(> img.fig) {
+  counter-increment: figure;
+}
+figure.fig figcaption::before,
+figure:has(> img.fig) figcaption::before {
+  content: "図" counter(figure);
+}
+figure.table {
+  counter-increment: table;
+}
+figure.table figcaption::before {
+  content: "表" counter(table);
+}
+figure.fig figcaption::before,
+figure:has(> img.fig) figcaption::before,
+figure.table figcaption::before {
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-inline-end: 1rem;
+}
+figure.fig img:not(:first-of-type) {
+  margin-inline-start: 1rem; /* 画像と画像の間隔 */
+}
+table {
+  border-collapse: collapse;
+}
+table thead th,
+table thead td {
+    border-top: 1px solid;
+    border-bottom: 2px double;
+}
+table tbody tr:last-child th,
+table tbody tr:last-child td {
+    border-bottom: 1px solid;
+}

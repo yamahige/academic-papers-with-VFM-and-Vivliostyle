@@ -1,0 +1,18 @@
+h4 {
+  display: inline;
+  margin-inline-end: 1rem;
+}
+h4::before {
+  /* h4の前にインライン要素がある場合に問題が起きないように */
+  content: "";
+  display: block;
+  margin-block-start: 1em;
+}
+h4 + p {
+  display: inline;
+}
+h4 + p::after {
+  content: "";
+  display: block;
+  margin-block-end: 1em;
+}

@@ -1,0 +1,9 @@
+:root {
+  counter-reset: section 0;
+}
+h2:not(.abstract, .acknowledgement) {
+  counter-increment: section;
+}
+h2:not(.abstract, .acknowledgement)::before {
+  content: "§" counter(section) " ";
+}

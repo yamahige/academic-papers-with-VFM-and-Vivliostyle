@@ -1,0 +1,35 @@
+:root {
+  counter-reset: footnote 0;
+  column-count: 2;
+  column-gap: 2rem;
+  column-fill: auto;
+}
+.fn-text {
+  float: footnote;
+  counter-increment: footnote;
+  padding-inline-start: 2rem;
+  text-indent: -2rem;
+}
+::footnote-marker {
+  content: "*" counter(footnote) " ";
+  width: 2rem;
+  margin-inline-end: 1rem;
+}
+::footnote-call {
+  content: "*" counter(footnote);
+  font-size: .7rem;
+  position: relative;
+  inset-block-start: -0.5rem;
+}
+.fn-ref {
+  text-decoration: none;
+}
+.fn-ref:link, .fn-ref.visited, .fn-ref:hover {
+  color: currentcolor;
+}
+.fn-ref::after {
+  content: "*" target-counter(attr(href url), footnote);
+  font-size: .7rem;
+  position: relative;
+  inset-block-start: -0.5rem;
+}

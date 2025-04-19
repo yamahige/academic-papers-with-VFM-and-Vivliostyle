@@ -1,0 +1,9 @@
+@page {
+  @top-right {
+      content: "論文番号 " string(article-number);
+  }
+}
+.article-id {
+  string-set: article-number content();
+  display: none;
+}

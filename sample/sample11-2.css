@@ -1,0 +1,19 @@
+:root {
+  counter-reset: section 0;
+}
+h2 {
+  counter-increment: section;
+}
+h2::before {
+  content: counter(section) "章 ";
+}
+p.abstract::before {
+  content: "概要: ";
+  font-weight: bold;
+  font-family: sans-serif;
+}
+p.acknowledgement::before {
+  content: "謝辞 ";
+  font-weight: bold;
+  font-family: sans-serif;
+}

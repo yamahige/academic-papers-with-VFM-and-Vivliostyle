@@ -1,0 +1,25 @@
+@page {
+  size: A4 portrait;
+  @bottom-center {
+      content: counter(page);
+  }
+}
+@page a3-landscape {
+  size: A3 landscape;
+  @bottom-center {
+    content: counter(page);
+  }
+}
+.a3-landscape {
+  page: a3-landscape;
+}
+.dummy-figure {
+  block-size: 15cm;
+  inline-size: 80%;
+  border: thin solid blue;
+  display: grid;
+  place-items: center;
+}
+.dummy-figure::before {
+  content: "図の中身";
+}

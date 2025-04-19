@@ -1,0 +1,47 @@
+:root {
+  counter-reset: section 0 subsection 0 subsubsection 0;
+  --section-heading-font-size: 1.4rem;
+  --subsection-heading-font-size: 1rem;
+}
+
+h2 {
+  counter-increment: section;
+  counter-reset: subsection 0;
+  font-size: var(--section-heading-font-size);
+}
+h2:not(.appendix)::before {
+  content: counter(section) ".";
+  margin-inline-end: 1rem;
+}
+h3, h4 {
+  font-size: var(--subsection-heading-font-size);
+}
+h3 {
+  counter-increment: subsection;
+  counter-reset: subsubsection 0;
+}
+h3::before {
+  content: counter(section) "." counter(subsection);
+  margin-inline-end: 1rem;
+}
+
+section:has(> h2.appendix) {
+  counter-reset: subsection 0;
+}
+h2.appendix {
+  letter-spacing: 4rem;
+}
+section:has(> h2.appendix) h3 {
+  font-size: var(--section-heading-font-size);
+}
+section:has(> h2.appendix) h3::before {
+  content: "A." counter(subsection);
+  margin-inline-end: 1rem;
+}
+section:has(> h2.appendix) h4 {
+  counter-increment: subsubsection;
+}
+section:has(> h2.appendix) h4::before {
+  content: "A." counter(subsection) "." counter(subsubsection);
+  margin-inline-end: 1rem;
+}

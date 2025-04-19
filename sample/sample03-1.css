@@ -1,0 +1,22 @@
+:root {
+  counter-reset: figure 0;
+}
+figure {
+  counter-increment: figure;
+}
+figcaption::before {
+  content: "図" counter(figure) " ";
+}
+.fig-ref::after {
+  content: "図" target-counter(attr(href url), figure);
+}
+.dummy-figure {
+  block-size: 10vh;
+  inline-size: 80%;
+  border: thin solid blue;
+  display: grid;
+  place-items: center;
+}
+.dummy-figure::before {
+  content: "図の中身";
+}

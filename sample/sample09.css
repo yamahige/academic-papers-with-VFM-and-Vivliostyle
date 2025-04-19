@@ -1,0 +1,9 @@
+:root {
+  column-count: 2;
+  column-fill: auto;
+}
+.affiliation {
+  float: block-end;
+  float-reference: column;
+  border-block-start: thin solid currentcolor;
+}

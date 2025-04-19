@@ -1,0 +1,15 @@
+figure {
+  float: block-start;
+  float-reference: page;
+  margin-block-start: 0;
+}
+.dummy-figure {
+  block-size: 25vh;
+  inline-size: 95%;
+  border: thin solid blue;
+  display: grid;
+  place-items: center;
+}
+.dummy-figure::before {
+  content: "図の中身";
+}

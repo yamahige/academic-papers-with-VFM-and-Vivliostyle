@@ -1,0 +1,38 @@
+:root {
+  text-align: justify;
+  text-spacing: auto;
+  /*
+  border-inline-start: thin solid purple;
+  */
+  column-count: 2;
+  column-gap: 2em;
+  column-fill: auto;
+}
+ol {
+  list-style-type: none;
+  counter-reset: custom-counter 0;
+  margin-block: 0;
+  --list-padding: 2em;
+  padding-inline-start: var(--list-padding);
+  /*
+  border-inline-end: thin solid purple;
+  */
+}
+ol > li {
+  counter-increment: custom-counter;
+  display: flow-root; /* 本体が空のときに項目が潰れないように */
+}
+ol > li::before {
+  float: left;
+  break-after: avoid; /* 番号と本体とが別段や別ページに別れないように */
+  margin-inline-start: calc(-1 * var(--list-padding));
+  min-inline-size: var(--list-padding);
+  content: "（" counter(custom-counter) "）"; /* 全角の括弧 */
+  /*
+  border-inline-end: thin solid purple;
+  */
+}
+p {
+  text-indent: 1em;
+  margin-block: 0;
+}

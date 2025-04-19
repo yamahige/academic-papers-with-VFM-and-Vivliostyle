@@ -1,0 +1,12 @@
+:root {
+  counter-reset: reference 0;
+}
+.reference {
+  counter-increment: reference;
+}
+.reference::before {
+  content: "[" counter(reference) "]";
+}
+.cite::after {
+  content: "[" target-counter(attr(href url), reference) "]";
+}

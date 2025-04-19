@@ -1,0 +1,20 @@
+h2.author {
+  display: none;
+}
+section:has(> .author) {
+  text-align: center;
+}
+section:has(> .author) > p {
+  display: inline;
+}
+section:has(> .author) > p:not(:first-of-type) {
+  margin-inline-start: 1rem;
+}
+
+h2:not(.author) {
+  counter-increment: section;
+}
+h2:not(.author)::before {
+  content: counter(section) ".";
+  margin-inline-end: 1rem;
+}

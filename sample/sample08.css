@@ -1,0 +1,22 @@
+:root {
+  column-count: 2;
+  column-fill: auto;
+}
+figure,
+p {
+  margin-break: discard;
+}
+figure {
+  float: block-start;
+  float-reference: page;
+}
+.dummy-figure {
+  block-size: 25vh;
+  inline-size: 95%;
+  border: thin solid blue;
+  display: grid;
+  place-items: center;
+}
+.dummy-figure::before {
+  content: "図の中身";
+}

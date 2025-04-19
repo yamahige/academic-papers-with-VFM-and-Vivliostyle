@@ -1,0 +1,21 @@
+:root {
+  counter-reset: equation 0;
+}
+.equation {
+  counter-increment: equation;
+  display: grid;
+  grid-template-columns: auto 3rem;
+  break-inside: avoid;
+  align-content: center;
+  align-items: center;
+}
+.equation > [data-math-typeset] {
+  justify-self: center; /* 中央揃え */
+}
+.equation::after {
+  content: "(" counter(equation) ")";
+  justify-self: end; /* 末尾（右）揃え */
+}
+a.eqref::before {
+  content: "(" target-counter(attr(href url), equation) ")";
+}

@@ -1,0 +1,11 @@
+:root {
+  column-count: 2;
+  column-fill: balance;
+}
+header {
+  float: block-start;
+  float-reference: page;
+}
+p {
+  margin-break: discard;
+}

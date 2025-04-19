@@ -1,0 +1,12 @@
+h2.author {
+  display: none;
+}
+section:has(> .author) > p {
+  display: inline;
+}
+section:has(> .author:lang(en)) > p {
+  font-variant-caps: small-caps;
+}
+section:has(> .author) > p:not(:first-of-type) {
+  margin-inline-start: 1rem;
+}

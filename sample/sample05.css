@@ -1,0 +1,16 @@
+:root {
+    counter-reset: footnote 0;
+}
+.fn-text {
+    float: footnote;
+    counter-increment: footnote;
+}
+::footnote-marker {
+    content: "*" counter(footnote) " ";
+}
+::footnote-call {
+    content: "*" counter(footnote);
+    font-size: .7rem;
+    position: relative;
+    inset-block-start: -0.5rem;
+}

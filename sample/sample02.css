@@ -1,0 +1,12 @@
+:root {
+  column-count: 2;
+  column-fill: auto;
+}
+header {
+  float: block-start;
+  float-reference: page;
+  text-align: center;
+}
+p {
+  margin-break: discard;
+}
