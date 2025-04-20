@@ -11,7 +11,7 @@ Abstract abstract abstract abstract abstract abstract abstract abstract abstract
 
 ## Heading
 
-Text text text text text text text text text text text text text。text text text text text text text text text text text text text。
+Text text text text text text text text text text text text text. text text text text text text text text text text text text text.
 
 ## Acknowledgement{.acknowledgement}
 
