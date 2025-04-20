@@ -1,5 +1,5 @@
 ---
-lang: 'ja'
+lang: 'en'
 title: "Vivliostyleで学会論文を投稿する"
 link:
   - rel: 'stylesheet'

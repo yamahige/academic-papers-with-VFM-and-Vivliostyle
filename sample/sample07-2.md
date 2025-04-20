@@ -1,5 +1,5 @@
 ---
-lang: 'ja'
+lang: 'en'
 link:
   - rel: 'stylesheet'
     href: 'sample07-2.css'
