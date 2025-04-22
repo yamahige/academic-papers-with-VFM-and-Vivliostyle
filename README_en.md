@@ -1,4 +1,4 @@
-# Writing Academic Papers with VFM and Typesetting Them with Vivliostyle
+# Writing Academic Papers with VFM and Typesetting(Formatting, Printing) Them with Vivliostyle
 
 Have you ever wanted to submit an academic paper typeset entirely using CSS? You're not alone—I’ve felt the same way for a long time. And more and more researchers are saying, “I want to write my papers in Markdown.”
 
